@@ -1,43 +1,23 @@
-```html
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Média</title>
+    <link rel="stylesheet" href="C:\Users\Aluno\Desktop\Calculadora de Média\style.css">
 </head>
 <body>
-    <div>
-        <h1>Calculadora de média</h1>
-        <input type="number" max="10" id="nota1" placeholder="Insira a nota 1">
-        <input type="number" max="10" id="nota2" placeholder="Insira a nota 2">
-        <input type="number" max="10" id="nota3" placeholder="Insira a nota 3">
 
-        <button id="calcular" onclick="calcular()">Calcular</button>
+    <h1>Calculadora de Média</h1>
 
-        <p>A sua média é: <span id="media"></span></p>
-        <p>Status: <span id="status"></span></p>
-    </div>
+    <input type="number" id="nota1" placeholder="Primeira nota">
 
-    <script>
-        function calcular(){
-            var n1, n2, n3, media;
+    <input type="number" id="nota2" placeholder="Segunda nota">
 
-            n1 = document.getElementById('nota1').value;
-            n2 = document.getElementById('nota2').value;
-            n3 = document.getElementById('nota3').value;
+    <button onclick="calcularMedia()">Calcular</button>
 
-            media = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3)) / 3;
+    <p id="resultado"></p>
 
-            document.getElementById('media').innerHTML = media;
-
-            if(media < 7){
-                document.getElementById('status').innerHTML = "Reprovado";
-            }else{
-                document.getElementById('status').innerHTML = "Aprovado";
-            }
-        }
-    </script>
+    <script src="C:\Users\Aluno\Desktop\Calculadora de Média\script.js"></script>
 </body>
 </html>
-
